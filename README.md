@@ -14,41 +14,30 @@ This repository tracks notable **SaaS platforms** and **open-source projects** f
 Contributions welcome! Open a PR to add/update entries. Keep descriptions factual and link to official sites.
 
 ## Table of Contents
-- [SaaS/Hosted Platforms](#saas-products)
+- [SaaS/Hosted Platforms](#saashosted-platforms)
 - [Open-Source GitHub Projects](#open-source-github-projects)
 - [How to Contribute](#how-to-contribute)
 - [Disclaimer](#disclaimer)
 
 ## SaaS/Hosted Platforms
-- **[Amdocs BSS](https://www.amdocs.com/)**  
-  Market-leading end-to-end BSS suite for Tier-1 operators, covering billing, customer management, product catalog, order management, and AI-enhanced revenue operations.
 
-- **[Netcracker Digital BSS](https://www.netcracker.com/)**  
-  Cloud-native digital BSS platform widely used by large carriers for convergent charging, catalog, order, and customer experience transformation.
-
-- **[CSG Ascendon](https://www.csgi.com/)**  
-  Digital BSS and revenue management platform popular with North American and global operators, especially strong in MVNO and high-velocity billing scenarios.
-
-- **[Optiva BSS](https://www.optiva.com/)**  
-  Cloud-native charging and BSS platform favored by digital telcos and operators needing flexible, real-time monetization capabilities.
-
-- **[Oracle Communications Billing](https://www.oracle.com/industries/communications/)**  
-  Enterprise Billing and Revenue Management (BRM) solutions supporting complex rating, policy, charging, and multi-play offerings.
-
-- **[Ericsson Charging](https://www.ericsson.com/)**  
-  Converged charging and monetization portfolio tightly integrated with Ericsson’s network and core offerings, strong in 5G and IoT scenarios.
-
-- **[Huawei CBS](https://www.huawei.com/)**  
-  Convergent Billing System used by many operators globally for prepaid/postpaid charging, rating, and customer management.
-
-- **[Matrixx Software](https://www.matrixx.com/)**  
-  Real-time convergent charging platform focused on digital services, 5G monetization, and flexible pricing models (note ongoing market consolidation).
-
-- **[Enghouse Networks](https://www.enghouse.com/)**  
-  Network and service management solutions that include BSS-related billing and operational support capabilities.
-
-- **[Openet](https://www.openet.com/)**  
-  Specialist in policy, charging, and real-time monetization components frequently deployed in 4G/5G and digital service environments.
+| Product / Platform | Primary Focus & Description | Starting Pricing | Free Tier / Free Trial Limits |
+| :--- | :--- | :--- | :--- |
+| **[Totogi BSS & Charging](https://totogi.com/)** | Cloud-native multi-tenant SaaS OCS and BSS built natively on AWS for digital telcos and MVNOs. | $0.05 / 10,000 transactions (Pay-as-you-go above free tier) | **Free forever** up to 500 million transactions/mo (Charging) & 500 million API calls/mo (BSS) for ≤250,000 subscribers |
+| **[Cerillion Skyline](https://www.cerillion.com/)** | Cloud-native SaaS subscription billing, rating, and customer lifecycle management system. | $140 / month (Skyline Essential starting tier) | 7-day free trial with access to billing configuration engine, sample catalogs, and API endpoints |
+| **[Lago Cloud](https://www.getlago.com/)** | Real-time usage-based billing, metering, and invoicing engine for digital telcos and API services. | $250 / month (Pro Cloud tier) | **Free forever** open-source self-hosted edition (unlimited events) or 14-day free trial on Cloud Pro |
+| **[Kill Bill (AWS Cloud)](https://killbill.io/)** | Enterprise subscription billing and payment management architecture running on cloud infrastructure. | $40 / month (Base AMI software subscription fee) | **Free forever** open-core self-hosted edition or 14-day free trial via AWS Marketplace listing |
+| **[LogiSense](https://www.logisense.com/)** | Agile subscription, telecom usage rating, and mediation platform for VoIP, IoT, and enterprise CSPs. | $1,000 / month (Starter deployment tier) | 30-day free trial with 24/7 sandbox access, rating simulation templates, and onboarding orientation |
+| **[Enghouse Networks BSS](https://www.enghouse.com/)** | Cloud billing, interconnect billing, customer care, and revenue assurance for regional CSPs and ISPs. | $5,000 / month (Cloud billing starting tier) | 30-day evaluation trial including guided demo tenant and sample CDR rating batch testing |
+| **[Oracle Communications Billing (BRM)](https://www.oracle.com/industries/communications/)** | Cloud-deployed Billing and Revenue Management suite for complex rating, policy, and multi-play CSPs. | $2,500 / month (OCI base managed entry tier + $0.05/active subscriber) | 30-day free trial with $300 Oracle Cloud Infrastructure (OCI) credits to test and run BRM instances |
+| **[Optiva BSS](https://www.optiva.com/)** | Cloud-native charging and BSS suite deployed as SaaS on Google Cloud for digital telcos and MVNO Hubs. | $10,000 / month (MVNO Hubs base platform tier) | 30-day guided pilot & proof-of-concept sandbox for MVNO and digital telco architecture evaluation |
+| **[PortaOne (PortaSwitch / PortaBilling)](https://portaone.com/)** | Multi-tenant cloud-hosted convergent BSS/OCS for Class 4/5 SIP routing, MVNOs, and fixed-line telcos. | $12,500 / month ($150,000/yr starting base tier deployment) | 30-day free trial for Add-on Mart extension modules with full integration sandbox on test instances |
+| **[CSG Ascendon](https://www.csgi.com/)** | Digital BSS and high-velocity revenue management platform for multi-brand telcos and MVNOs on AWS/Azure. | $15,000 / month (Base SaaS platform tier) | 30-day enterprise sandbox and proof-of-concept testing environment for verified telco operators |
+| **[Openet (Amdocs)](https://www.openet.com/)** | Real-time policy, charging (CHF), and data monetization SaaS suite for 4G/5G standalone networks. | $18,000 / month (Cloud-native policy/charging gateway starting tier) | 30-day sandbox pilot access for Diameter and 5G HTTP/2 Service-Based Architecture (SBA) validation |
+| **[Matrixx Software](https://www.matrixx.com/)** | Real-time 5G convergent charging and digital commerce platform for cloud-native network monetization. | $20,000 / month (Core cloud charging entry tier) | 30-day lab sandbox access with up to 10,000 simulated subscribers for performance evaluation |
+| **[Amdocs BSS / connectX](https://www.amdocs.com/)** | Market-leading end-to-end cloud BSS suite for Tier-1 CSPs and MVNOs (charging, catalog, care, billing). | $25,000 / month (connectX / SaaS entry-level subscription tier) | 30-day structured PoC sandbox trial via AWS Marketplace / telco partner program |
+| **[Netcracker Digital BSS](https://www.netcracker.com/)** | Full-stack digital BSS platform for convergent charging, partner ecosystem, and digital customer journeys. | $30,000 / month (Entry managed SaaS subscription tier) | 60-day structured Proof-of-Concept (PoC) evaluation in a dedicated cloud carrier sandbox |
+| **[Ericsson Charging](https://www.ericsson.com/)** | 3GPP-compliant converged charging system (CCS) and monetization portfolio for 5G, IoT, and hybrid CSPs. | $35,000 / month (Managed cloud BSS entry base tier) | 30-day partner lab environment sandbox access for 5G charging API and rating scenario validation |
 
 ## Open-Source GitHub Projects
 - **[CGRateS](https://github.com/cgrates/cgrates)**  
