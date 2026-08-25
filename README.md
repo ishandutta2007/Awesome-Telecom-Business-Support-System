@@ -1,6 +1,6 @@
 # Awesome-Telecom-Business-Support-System
 
-# Top Telecom Business Support Systems (BSS) Ecosystem
+## Top Telecom Business Support Systems (BSS) Ecosystem
 **Curated List of SaaS Products & Open-Source GitHub Projects**
 *Focused on Billing, Charging (OCS), Customer Management, Product Catalog, Order Management & Revenue Operations for CSPs, MVNOs & Digital Telcos*
 **Last updated: August 2026**
