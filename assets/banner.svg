@@ -1,0 +1,198 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="100%" height="100%">
+  <defs>
+    <!-- Background Linear Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070b19" />
+      <stop offset="50%" stop-color="#0c1735" />
+      <stop offset="100%" stop-color="#050814" />
+    </linearGradient>
+
+    <!-- Accent Gradients -->
+    <linearGradient id="neonCyan" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f2fe" />
+      <stop offset="100%" stop-color="#4facfe" />
+    </linearGradient>
+
+    <linearGradient id="neonPurple" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f355da" />
+      <stop offset="100%" stop-color="#7000ff" />
+    </linearGradient>
+
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="40%" stop-color="#e0f2fe" />
+      <stop offset="100%" stop-color="#38bdf8" />
+    </linearGradient>
+
+    <linearGradient id="glowLine" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f2fe" stop-opacity="0" />
+      <stop offset="50%" stop-color="#38bdf8" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#a855f7" stop-opacity="0" />
+    </linearGradient>
+
+    <!-- Glow Filter -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <filter id="strongGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="10" result="blur1" />
+      <feGaussianBlur stdDeviation="20" result="blur2" />
+      <feMerge>
+        <feMergeNode in="blur2" />
+        <feMergeNode in="blur1" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <!-- Dynamic CSS Animations -->
+    <style>
+      @keyframes pulseGlow {
+        0%, 100% { opacity: 0.35; transform: scale(1); }
+        50% { opacity: 0.85; transform: scale(1.08); }
+      }
+      @keyframes floatParticle {
+        0% { transform: translateY(0px) translateX(0px); opacity: 0.2; }
+        50% { transform: translateY(-25px) translateX(15px); opacity: 0.9; }
+        100% { transform: translateY(0px) translateX(0px); opacity: 0.2; }
+      }
+      @keyframes dashFlow {
+        0% { stroke-dashoffset: 200; }
+        100% { stroke-dashoffset: 0; }
+      }
+      @keyframes radarSweep {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+      @keyframes pulseRing {
+        0% { r: 10; opacity: 0.9; }
+        100% { r: 55; opacity: 0; }
+      }
+      @keyframes scanBeam {
+        0% { transform: translateY(-100px); opacity: 0; }
+        50% { opacity: 0.4; }
+        100% { transform: translateY(380px); opacity: 0; }
+      }
+
+      .pulse-circle { animation: pulseGlow 4s ease-in-out infinite; transform-origin: center; }
+      .p1 { animation: floatParticle 5s ease-in-out infinite; }
+      .p2 { animation: floatParticle 7s ease-in-out infinite 1s; }
+      .p3 { animation: floatParticle 6s ease-in-out infinite 2s; }
+      .p4 { animation: floatParticle 8s ease-in-out infinite 1.5s; }
+      .flow-line { stroke-dasharray: 10, 15; animation: dashFlow 8s linear infinite; }
+      .radar-arm { transform-origin: 1060px 180px; animation: radarSweep 10s linear infinite; }
+      .pulse-ring-1 { animation: pulseRing 3s cubic-bezier(0.215, 0.61, 0.355, 1) infinite; }
+      .pulse-ring-2 { animation: pulseRing 3s cubic-bezier(0.215, 0.61, 0.355, 1) infinite 1.5s; }
+      .scanner { animation: scanBeam 6s ease-in-out infinite; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="360" rx="16" fill="url(#bgGrad)" stroke="#1e293b" stroke-width="2" />
+
+  <!-- Isometric / Circuit Grid Background -->
+  <g opacity="0.15">
+    <path d="M0,60 H1200 M0,120 H1200 M0,180 H1200 M0,240 H1200 M0,300 H1200" stroke="#38bdf8" stroke-width="1" />
+    <path d="M100,0 V360 M200,0 V360 M300,0 V360 M400,0 V360 M500,0 V360 M600,0 V360 M700,0 V360 M800,0 V360 M900,0 V360 M1000,0 V360 M1100,0 V360" stroke="#38bdf8" stroke-width="1" />
+  </g>
+
+  <!-- Glowing background orbs -->
+  <circle cx="150" cy="180" r="140" fill="#38bdf8" opacity="0.12" filter="url(#glow)" class="pulse-circle" />
+  <circle cx="1060" cy="180" r="130" fill="#a855f7" opacity="0.15" filter="url(#glow)" class="pulse-circle" />
+
+  <!-- Animated Data Connection Lines (BSS Flow) -->
+  <g fill="none" stroke-width="1.5">
+    <path d="M 80,180 Q 250,80 480,180 T 900,180 T 1120,180" stroke="#00f2fe" class="flow-line" opacity="0.6" />
+    <path d="M 80,220 Q 300,300 560,180 T 950,220 T 1120,120" stroke="#f355da" class="flow-line" opacity="0.5" />
+    <path d="M 150,100 L 300,100 L 400,180 L 750,180 L 850,260 L 1050,260" stroke="#38bdf8" opacity="0.3" stroke-width="1" />
+  </g>
+
+  <!-- Left Icon: Telecom Mast / Signal Tower Graphic -->
+  <g transform="translate(100, 100)">
+    <!-- Tower Legs -->
+    <path d="M50,150 L20,30 M50,150 L80,30 M20,30 L80,30 M30,70 L70,70 M40,110 L60,110 M50,30 L50,0" stroke="#00f2fe" stroke-width="2.5" stroke-linecap="round" filter="url(#glow)" />
+    <!-- Radiating Signal Waves -->
+    <path d="M35,15 A20,20 0 0,1 65,15" fill="none" stroke="#38bdf8" stroke-width="2" opacity="0.8" />
+    <path d="M25,5 A35,35 0 0,1 75,5" fill="none" stroke="#38bdf8" stroke-width="2" opacity="0.6" />
+    <path d="M15,-5 A50,50 0 0,1 85,-5" fill="none" stroke="#00f2fe" stroke-width="2" opacity="0.4" />
+    <!-- Pulse Center Node -->
+    <circle cx="50" cy="0" r="4" fill="#00f2fe" filter="url(#strongGlow)" />
+  </g>
+
+  <!-- Right Graphic: Real-Time Convergent Charging / Radar Node -->
+  <g transform="translate(1060, 180)">
+    <circle cx="0" cy="0" r="70" fill="none" stroke="#7000ff" stroke-width="1.5" opacity="0.4" />
+    <circle cx="0" cy="0" r="45" fill="none" stroke="#00f2fe" stroke-width="1.5" opacity="0.6" />
+    <circle cx="0" cy="0" r="20" fill="#0f172a" stroke="#38bdf8" stroke-width="2" />
+    
+    <!-- Dynamic Radar Waves -->
+    <circle cx="0" cy="0" r="10" fill="none" stroke="#00f2fe" stroke-width="2" class="pulse-ring-1" />
+    <circle cx="0" cy="0" r="10" fill="none" stroke="#a855f7" stroke-width="2" class="pulse-ring-2" />
+    
+    <!-- Rotating Radar Scanner Arm -->
+    <line x1="0" y1="0" x2="65" y2="0" stroke="url(#neonCyan)" stroke-width="2" class="radar-arm" filter="url(#glow)" />
+    
+    <!-- Orbital Nodes (OCS / CRM / Billing / Catalog) -->
+    <circle cx="0" cy="-45" r="5" fill="#00f2fe" filter="url(#glow)" />
+    <circle cx="45" cy="0" r="5" fill="#f355da" filter="url(#glow)" />
+    <circle cx="0" cy="45" r="5" fill="#38bdf8" filter="url(#glow)" />
+    <circle cx="-45" cy="0" r="5" fill="#10b981" filter="url(#glow)" />
+  </g>
+
+  <!-- Floating Ambient Particles -->
+  <circle cx="320" cy="90" r="3" fill="#00f2fe" class="p1" filter="url(#glow)" />
+  <circle cx="450" cy="280" r="2.5" fill="#f355da" class="p2" filter="url(#glow)" />
+  <circle cx="820" cy="80" r="3.5" fill="#38bdf8" class="p3" filter="url(#glow)" />
+  <circle cx="720" cy="290" r="2" fill="#a855f7" class="p4" filter="url(#glow)" />
+
+  <!-- Center Typography and Badges -->
+  <g text-anchor="middle" transform="translate(600, 0)">
+    
+    <!-- Top Pill Badge -->
+    <g transform="translate(0, 52)">
+      <rect x="-170" y="0" width="340" height="28" rx="14" fill="#0f172a" stroke="#38bdf8" stroke-width="1.2" opacity="0.9" />
+      <circle cx="-145" cy="14" r="4" fill="#10b981" filter="url(#glow)" />
+      <text x="0" y="19" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" fill="#38bdf8" letter-spacing="2">
+        TELECOM BSS ECOSYSTEM • 2026
+      </text>
+    </g>
+
+    <!-- Main Title -->
+    <text x="0" y="138" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="44" font-weight="900" fill="url(#textGrad)" letter-spacing="-0.5" filter="url(#glow)">
+      Awesome Telecom BSS
+    </text>
+
+    <!-- Gradient Divider Line -->
+    <line x1="-280" y1="165" x2="280" y2="165" stroke="url(#glowLine)" stroke-width="2.5" />
+
+    <!-- Subtitle Line 1 -->
+    <text x="0" y="205" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="17" font-weight="600" fill="#f1f5f9" letter-spacing="0.5">
+      Business Support Systems • Online Charging (OCS) • Real-Time Rating
+    </text>
+
+    <!-- Subtitle Line 2 / Feature Pills -->
+    <text x="0" y="240" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="500" fill="#94a3b8" letter-spacing="0.3">
+      Curated SaaS Platforms, Cloud-Native Engines &amp; Open-Source Telecommunications Software
+    </text>
+
+    <!-- Feature Tags Row -->
+    <g transform="translate(0, 275)">
+      <!-- Tag 1 -->
+      <rect x="-245" y="0" width="115" height="24" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1" />
+      <text x="-187" y="16" font-family="sans-serif" font-size="11" font-weight="600" fill="#38bdf8">5G / 4G SA CHF</text>
+      <!-- Tag 2 -->
+      <rect x="-115" y="0" width="110" height="24" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1" />
+      <text x="-60" y="16" font-family="sans-serif" font-size="11" font-weight="600" fill="#a855f7">CDR Mediation</text>
+      <!-- Tag 3 -->
+      <rect x="10" y="0" width="110" height="24" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1" />
+      <text x="65" y="16" font-family="sans-serif" font-size="11" font-weight="600" fill="#34d399">MVNO Billing</text>
+      <!-- Tag 4 -->
+      <rect x="135" y="0" width="110" height="24" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1" />
+      <text x="190" y="16" font-family="sans-serif" font-size="11" font-weight="600" fill="#f43f5e">TM Forum Open API</text>
+    </g>
+  </g>
+
+  <!-- Bottom Accent Border -->
+  <rect x="0" y="356" width="1200" height="4" fill="url(#neonCyan)" />
+</svg>
